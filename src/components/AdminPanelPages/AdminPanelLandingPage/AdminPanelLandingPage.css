@@ -1,0 +1,33 @@
+.admin-panel-landing-page .upload-an-img ,.admin-panel-landing-page .less-than-5{
+    display: none;
+}
+
+
+.admin-panel-landing-page .dropzone-div .drop-zone{
+    width: 100px;
+    height: 100px;
+    background-image: url(../../../assets/AdminPanelDropzone.png);
+    background-size: 94%;
+    background-position: center;
+}
+
+
+.admin-panel-landing-page .uploadfield-div .Upload_field , .admin-panel-landing-page .uploadfield-div .Upload_field img{
+    height: 48px;
+}
+
+
+.admin-panel-landing-page .default-link-div label{
+    max-width: 175px;
+}
+
+
+.admin-panel-landing-page .default-link-div div{
+    padding-left: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.admin-panel-landing-page label , .admin-panel-landing-page input.MuiInputBase-input{
+    font-size: 16px;
+}

@@ -1,0 +1,47 @@
+.footer {
+  max-width: 1473px;
+  width: 100%;
+
+  flex-direction: column;
+  align-items: center;
+
+  background: var(--Linear-BG, linear-gradient(71deg, #FF9F0A 0%, #FF375F 62.9%)) !important;
+}
+
+
+.footer_text {
+  color: #FFF;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+
+@media only screen and (max-width: 1900px) {
+  .scrollable-tabs-class {
+    max-width: 94%;
+  }
+}
+
+
+
+/* 
+@media only screen and (min-width: 1366px) and (max-width: 1814px) {
+ 
+  .bottom-slider-div{
+    margin-right: 15px;
+  }
+} */
+
+
+
+/* Successful Campaign Page css */
+@media screen and (max-width: 600px) {
+
+.successful-filter{
+  justify-content: center !important;
+}
+
+}

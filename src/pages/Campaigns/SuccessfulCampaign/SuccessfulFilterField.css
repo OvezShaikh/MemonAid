@@ -1,0 +1,31 @@
+div#demo-multiple-checkbox {
+    border-top: rgba(235, 235, 235, 1) 2px solid !important;
+    padding-right: 0;
+    padding-top: 18px;
+
+}
+
+fieldset.MuiOutlinedInput-notchedOutline{
+    border: rgba(235, 235, 235, 1) 2px solid !important;
+}
+
+span.no-selected-text{
+    position: relative;
+    background: linear-gradient(to right, rgb(255, 159, 10) 0%, rgb(255, 55, 95) 62.9%) text;
+    -webkit-text-fill-color: transparent;
+}
+
+.extra-filter-options svg{
+    scale: 1.5;
+    margin-right: 16px;
+}
+
+
+.extra-filter-options .Mui-selected{
+
+    background-color: transparent !important;
+
+}
+
+
+

@@ -1,0 +1,36 @@
+.custom-chips {
+    background-color: white;
+    height: 43px;
+    border: 1px;
+    border-radius: 4px;
+    color: black;
+}
+
+.custom-chips .p-chips-token {
+    background-color: #f0f0f0;
+
+    color: black;
+    border-color: black;
+    margin: 2px;
+    padding: 3px;
+    font-family: 'satoshi';
+    border-radius: 10px;
+}
+
+.custom-chips .p-chips-token:hover {
+    background: #d9d7d7;
+    border: black;
+
+}
+
+.custom-chips .p-chips-token .p-chips-token-icon {
+    color: black;
+    background: transparent;
+    margin-left: 3px;
+}
+
+.custom-chips .p-chips-input-token {
+    color: black;
+    border-color: transparent;
+    padding-left: 10px;
+}

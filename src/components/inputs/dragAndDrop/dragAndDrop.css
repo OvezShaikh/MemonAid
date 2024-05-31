@@ -1,0 +1,58 @@
+.drop-zone{
+    background: url(../../../assets/Dashed\ Image\ Upload.png);
+    height: 52vh;
+    width: 74%;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    row-gap: 0px;
+    margin-left:auto ;
+    margin-right:auto ;
+    width: 350px;
+    height: 350px;
+}
+
+
+
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.normal-case.text-\[20px\].css-fcwakj-MuiButtonBase-root-MuiButton-root{
+    text-transform: none !important;
+    font-size: 20px !important;
+}
+
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.normal-case.text-\[20px\].css-fcwakj-MuiButtonBase-root-MuiButton-root {
+    background: transparent;
+}
+
+
+@media only screen and (min-width: 751px) and (max-width: 1365px) {
+    .drop-zone{
+        width: 87%;
+        height: 52vh;
+    }
+
+
+    button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.normal-case.text-\[20px\].css-fcwakj-MuiButtonBase-root-MuiButton-root{
+        font-size: 15px !important;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 751px) {
+
+    .drop-zone{
+        background-image: url(../../../assets/Dashed\ Image\ Upload\ Mobile\ \(1\).png);
+        width: 97%;
+        height: 33vh;
+    }
+
+
+    button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textWarning.MuiButton-sizeMedium.MuiButton-textSizeMedium.normal-case.text-\[20px\].css-fcwakj-MuiButtonBase-root-MuiButton-root{
+        font-size: 15px !important;
+    }
+}
+
+
