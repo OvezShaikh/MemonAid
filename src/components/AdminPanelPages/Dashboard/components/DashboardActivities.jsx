@@ -19,7 +19,7 @@ const DashboardActivities = () => {
 
   return (
     <div className="p-7">
-      <div className="grid grid-cols-2 grid-rows-2 gap-y-2 gap-x-1 items-center max-desktop:grid-cols-1">
+      <div className="grid grid-cols-2 grid-rows-2 gap-y-2 gap-x-1 items-center max-desktop:grid-cols-2">
         <div className="px-[16px] py-[14px] shadow-md w-[50%] h-[150.56px] rounded-2xl">
           <p className="font-medium">Total Donations</p>
           <h3 className="font-bold text-3xl mt-3">

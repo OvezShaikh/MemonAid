@@ -118,7 +118,6 @@ const Reported_Campaign = () => {
         url={`/admin-dashboard/campaign`}
         extraQuery={{ inactive: true }}
         addButton={<LocationConfigurationDialog />}
-        // addButton={<Button>HElloooooo</Button>}
         selectedRowID={selectedRowID}
       />
     </div>

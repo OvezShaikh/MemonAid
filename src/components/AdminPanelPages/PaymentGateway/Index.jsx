@@ -5,11 +5,14 @@ import RadioGroup from "../../inputs/radioGroupAdminPanel/index";
 import PrimaryButton from "../../inputs/PrimaryButton";
 import { toast } from "react-toastify";
 import { useCreateOrUpdate, useGetAll } from "../../../Hooks";
+import { useNavigate } from "react-router-dom";
+import { useQueryClient } from "react-query";
 
 function Index() {
   const [Details, setDetails] = useState({});
+  const queryClient = useQueryClient();
 
-  useGetAll({
+ useGetAll({
     key: `/admin-dashboard/phonepay`,
     enabled: true,
     select: (data) => {
@@ -20,7 +23,7 @@ function Index() {
     },
   });
 
-  const { mutate } = useCreateOrUpdate({
+  const { mutate  } = useCreateOrUpdate({
     url: `/admin-dashboard/phonepay`,
     method: "put",
   });
@@ -108,16 +111,16 @@ function Index() {
               />
             </div>
             <div className="flex flex-row gap-4 mt-12">
-              <button
-                // onClick={() => {
-                //     onClose();
-                // }}
+              {/* <button type="button"
+                 onClick={() => {
+                    navigate(-1)
+                }}
                 className="w-[69px] h-[32px] bg-[#F7F7F7]"
               >
                 <h1 className="text-[#000000] font-medium text-[14px] font-[satoshi]">
                   Cancel
                 </h1>
-              </button>
+              </button> */}
               <PrimaryButton type="submit">
                 <h1 className="text-white font-semibold font-[satoshi]">
                   Save

@@ -94,11 +94,11 @@ function Index() {
         {
           Donation
             ? toast.success("Marked as paid", {
-                position: "top-right",
-              })
+              position: "top-right",
+            })
             : toast.error("Marked as Rejected", {
-                position: "top-right",
-              });
+              position: "top-right",
+            });
         }
 
         navigate(-1);
@@ -127,7 +127,7 @@ function Index() {
                   <h1 className="text-[16px] font-[satoshi] pt-3   font-medium max-tablet:pl-2 max-tablet:pb-2">
                     {data?.campaign}
                   </h1>
-                  <a href={`/campaign-details/${id}`}>
+                  <a href={`/campaign-details/${data?.campaign}`} target="_blank">
                     <img
                       className="pt-3 pl-2"
                       src={images.CausesDetails}
@@ -314,32 +314,23 @@ function Index() {
             <div className="flex  justify-between w-[50%] max-desktop:w-full max-tablet:flex-col max-tablet:gap-3">
               <div className="w-[49%] max-tablet:w-full">
                 <InputField
-                  type="date"
-                  value={values?.updated_on}
-                  name="created_on"
-                  disable={true}
-                  label="Transaction Date:"
-                />
-              </div>
-              <div className="w-[49%] max-tablet:w-full">
-                <InputField
                   name={"Reward"}
                   disable={true}
                   label={"Reward:"}
                   placeholder={"Placeholder Text"}
                 />
               </div>
+              <div className="w-[49%] max-tablet:w-full">
+                <SelectField
+                  name={"Preferred"}
+                  label={"Preferred Donation City:"}
+                  disable={true}
+                  placeholder={"Placeholder Text"}
+                />
+              </div>
             </div>
           </div>
           <div className="flex w-full max-desktop:w-full max-tablet:flex-col  gap-3">
-            <div className="w-[25%] max-desktop:w-1/2 max-tablet:w-full">
-              <SelectField
-                name={"Preferred"}
-                label={"Preferred Donation City:"}
-                disable={true}
-                placeholder={"Placeholder Text"}
-              />
-            </div>
             <div className="w-[25%] max-desktop:w-1/2 max-tablet:w-full">
               <SelectField
                 name={"PreferredDonation"}

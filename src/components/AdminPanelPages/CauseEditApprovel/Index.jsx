@@ -114,6 +114,10 @@ function CauseEdit_Form() {
     return <div>Loading...</div>;
   }
 
+  console.log(initial_values , "<------");
+
+
+
   const handleSubmit = (values) => {
     const formData = new FormData();
     if (values?.campaign_image instanceof File) {
@@ -126,7 +130,7 @@ function CauseEdit_Form() {
     formData.append("summary", values?.summary);
     formData.append("story", values?.story);
     formData.append("category", values?.category?.id);
-    formData.append("status", values?.status.value);
+    formData.append("status", values?.status?.value || user?.status);
     formData.append("zakat_eligible", values?.zakat_eligible);
 
     mutate(formData, {
@@ -313,14 +317,13 @@ function CauseEdit_Form() {
                   />
                 </div>
               </div>
-
               <div className="flex w-[100%] max-tablet:flex-col gap-4">
                 <div className="w-[50%] max-tablet:w-full">
                   <SelectField
                     value={values?.status}
                     name={"status"}
                     label={"Status:"}
-                    placeholder={"Minimum 50 INR"}
+                    placeholder={""}
                     options={[
                       { label: "Pending", value: "Pending" },
                       { label: "Active", value: "Active" },

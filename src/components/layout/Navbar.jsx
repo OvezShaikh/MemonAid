@@ -60,8 +60,8 @@ const OurImpact = [
 ];
 const AboutUs = [
   {
-    name: "Knowing Fairseed",
-    href: "/Home/Knowing-Fairseed",
+    name: "Knowing MemonAid",
+    href: "/Home/Knowing-MemonAid",
   },
   {
     name: "Vision & Mission",
@@ -124,9 +124,8 @@ export default function Example() {
 
   const handleSearch = () => {
     setLoading(true);
-    // Replace 'https://api.example.com/search' with your actual API endpoint
     serverAPI
-      .get(`https://dev.fairseed.org:8000/campaign/global-search`)
+      .get(`${process.env.REACT_APP_BASE_URL}/campaign/global-search`)
       .then((response) => {
         if (!response.data.rows) {
           console.error("Invalid response data:", response);
@@ -207,7 +206,7 @@ export default function Example() {
       >
         <div className="flex lg:flex ">
           <NavLink to="/Home">
-            <img
+          <img
               className="max-tablet:w-40 max-tablet:h-9 max-w-36"
               src={images.Logo}
               alt="MemonAid"

@@ -3,7 +3,7 @@ import AdminNavbar from "../AdminNavbar";
 import { SideBar } from "../sideBar";
 import { useMediaQuery } from "@mui/material";
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = ({ children , count }) => {
   const [mobileOpen, setMobileOpen] = React.useState(true);
   const isMobile = useMediaQuery("(max-width:900px)");
 

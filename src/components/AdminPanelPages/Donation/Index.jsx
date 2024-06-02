@@ -66,26 +66,28 @@ const Index = () => {
       {
         Header: "Full Name",
         accessor: "full_name",
-        // minWidth: 150,
-        // width: 200,
+        minWidth: 150,
+        width: 200,
         nofilter: true,
 
       },
       {
         Header: "Campaign",
-        accessor: "campaign",
-        // minWidth: 200,
-        // width: 280,
+        accessor: "campaign_title",
+        minWidth: 150,
+        width: 200,
         Cell: ({ row }) => {
           return (
-            <div className='flex  '>
-              <div className="w-[80px] truncate">
-                {row?.original?.campaign}
-              </div>
-              <a href={`/campaign-details/${row.id}`} target="_blank">
-                <img className='ml-2' src={images.CausesDetails} alt="CausesDetails"  />
-              </a>
-            </div>
+            <div className="flex  ">
+            <div className="w-[80px] truncate">{row?.original?.campaign_title}</div>
+            <a href={`/campaign-details/${row?.original?.campaign}`} target="_blank">
+              <img
+                className="ml-2"
+                src={images.CausesDetails}
+                alt="CausesDetails"
+              />
+            </a>
+          </div>
           );
         },
 
@@ -93,34 +95,34 @@ const Index = () => {
       {
         Header: "Email",
         accessor: "email",
-        // minWidth: 150,
-        // width: 200,
+        minWidth: 150,
+        width: 200,
         nofilter: true,
 
       },
       {
         Header: "Donation",
         accessor: "amount",
-        // minWidth: 200,
-        // width: 280,
+        minWidth: 100,
+        width: 150,
 
       },
       {
         Header: "Payment Type",
         accessor: "payment_type",
-        // minWidth: 150,
-        // width: 200,
+        minWidth: 150,
+        width: 200,
         nofilter: true,
 
       },
       {
         Header: "Date",
-        accessor: "created_on",
-        // minWidth: 200,
-        // width: 280,
+        accessor: "transaction_date",
+        minWidth: 100,
+        width: 150,
        Cell:({row})=>{
         return (
-          <p>{DateConvert(row?.original?.created_on)}</p>
+          <p>{DateConvert(row?.original?.transaction_date)}</p>
         )
         
        }
@@ -133,8 +135,8 @@ const Index = () => {
       {
         Header: "Status",
         accessor: "status",
-        // minWidth: 200,
-        // width: 280,
+        minWidth: 100,
+        width: 150,
         nofilter: true,
         Cell: StatusCell,
 
@@ -145,7 +147,7 @@ const Index = () => {
         sortable: false,
         nofilter: true,
         minWidth: 100,
-        width: 100,
+        width: 150,
         search: false,
         Cell: ({ row }) => {
           return (

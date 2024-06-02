@@ -27,13 +27,6 @@ const CountrySelect = ({
     variant: "outlined",
   };
 
-  // if (countriesList) {
-  //   configTextfield.countries = countriesList;
-  // }
-  // if (meta && meta.touched && meta.error) {
-  //   configTextfield.error = true;
-  //   configTextfield.helperText = meta.error;
-  // }
   const { setFieldValue, values } = useFormikContext();
 
   return (
@@ -58,7 +51,6 @@ const CountrySelect = ({
         }}
         searchable
         searchPlaceholder="Search countries"
-        defaultCountry="India"
         id="react-flag-select"
         style={{ border: "1px solid red" }}
         {...configTextfield}

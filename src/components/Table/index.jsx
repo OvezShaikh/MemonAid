@@ -36,6 +36,9 @@ import Sorting from "./Sorting";
 import { FilterReset } from "@carbon/icons-react";
 import Columnfilter from "./Columnfilter";
 import { toast } from "react-toastify";
+import serverAPI from "../../config/serverAPI";
+import { positions } from "@mui/system";
+import axios from "axios";
 
 const dataGridStyles = {
   borderRadius: 0,
@@ -46,7 +49,7 @@ const dataGridStyles = {
     color: "#000",
     "& .MuiDataGrid-columnHeaderTitleContainer": {
       padding: "2px 8px 2px 6px",
-      // padding: "2px 8px 2px 6px",
+     
     },
     "& .MuiTableCell-root.MuiTableCell-head": {
       backgroundColor: "#FFF4EB",
@@ -368,16 +371,7 @@ const ReactTable = ({
     },
   });
 
-  const { refetch: GetExcel, isFetching: ExcelLoading } = useDownloadFile(
-    url,
-    {
-      ...extraQuery,
-      download: true,
-    },
-    () => {
-      toast.success("Excel Downloaded Successfully");
-    }
-  );
+
 
   const handleSortingChange = (accessor, colOrder) => {
     setSortField(accessor);
@@ -389,7 +383,6 @@ const ReactTable = ({
     if (filters?.length > 0) {
       refetchTableData();
     }
-    //eslint-disable-next-line
   }, [filters]);
 
   useEffect(() => {
@@ -438,6 +431,35 @@ const ReactTable = ({
       setQuery(e.target.value);
     }
   };
+
+  const GetExcel = async () => {
+    axios({
+      url: `${process.env.REACT_APP_BASE_URL}/admin-dashboard/export-data/nt/`,
+      method: 'GET',
+      responseType: 'blob', 
+    })
+      .then(response => {
+        
+        const blob = new Blob([response.data], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+        const url = window.URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'downloaded_file.xlsx'); 
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        link.parentNode.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => {
+        console.error('Error downloading Excel file:', error);
+      });
+  }
+  
 
   useGetAll({
     key: `/admin-dashboard/${title_slug}`,
@@ -510,7 +532,6 @@ const ReactTable = ({
             <div className="me-2">
               <SecondaryButton
                 onClick={() => GetExcel()}
-                isLoading={ExcelLoading}
                 loaderColor={"warning"}
                 startIcon={
                   <Download

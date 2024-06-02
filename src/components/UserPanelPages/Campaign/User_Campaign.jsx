@@ -8,7 +8,6 @@ import { Link, useLocation } from "react-router-dom";
 import images from "../../../constants/images";
 import { Dialog } from "../../../components/layout/dialogBox";
 import PrimaryButton from "../../inputs/PrimaryButton";
-import axios from "axios";
 import { toast } from "react-toastify";
 import { Form, Formik } from "formik";
 import { useCreateOrUpdate } from "../../../Hooks";
@@ -143,7 +142,7 @@ const User_Campaign = ({ onClose }) => {
         return (
           <div className="flex  ">
             <div className="w-[80px] truncate">{row?.original?.title}</div>
-            <a href={`/campaign-details/${row.id}`}>
+            <a href={`/campaign-details/${row.id}`} target="_blank">
               <img
                 className="ml-2"
                 src={images.CausesDetails}

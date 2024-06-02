@@ -82,7 +82,7 @@ function Index() {
       campaign?.campaign?.category?.name ||
       "",
     goal_amount:
-      campaign?.campaign_data?.amount || campaign?.campaign?.goal_amount || "",
+      campaign?.campaign_data?.goal_amount || campaign?.campaign?.goal_amount || "",
     location:
       campaign?.campaign_data?.location || campaign?.campaign?.location || "",
     end_date:
@@ -116,9 +116,9 @@ function Index() {
     formData.append("end_date", values?.end_date);
     formData.append("summary", values?.summary);
     formData.append("story", values?.story);
-    formData.append("category", values?.category);
+    formData.append("category", values?.category?.id || campaign?.campaign_data?.category?.id ||  campaign?.campaign?.category?.id );
     formData.append("zakat_eligible", values?.zakat_eligible);
-    formData.append("document", values?.category);
+    formData.append("document", values?.documents);
     formData.append("status", values?.status);
     formData.append("approve_campaign", approval);
 
@@ -149,7 +149,7 @@ function Index() {
                     {values.title}
                   </h1>
                   <a
-                    href={`/campaign-details/${id}`}
+                    href={`/campaign-details/${campaign?.campaign?.id}`}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -184,7 +184,7 @@ function Index() {
               />
               <div className="w-full">
                 <InputField
-                  color={campaignData?.amount ? "red" : undefined}
+                  color={campaignData?.goal_amount ? "red" : undefined}
                   onChange={handleChange}
                   type="number"
                   name={"goal_amount"}

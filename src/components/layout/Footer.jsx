@@ -459,7 +459,7 @@ function Footer() {
         <div>
           <hr className="text-white/50 pb-2"></hr>
           <p className="text-white/40 text-1xl max-tablet:text-center">
-            Copyright © MemonAid 2023
+          Copyright Memon ID @ 2024 
           </p>
         </div>
       </div>

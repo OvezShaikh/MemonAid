@@ -53,7 +53,7 @@ const Dashboard = () => {
     {
       DashBoardImg: images.Student,
       DashBoardTotal: dashboardData.studentBenefited,
-      DashBoardText: "Student Benefitted",
+      DashBoardText: "Beneficiaries Reached",
     },
   ];
 

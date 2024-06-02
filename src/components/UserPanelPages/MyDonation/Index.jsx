@@ -66,39 +66,46 @@ const MyDonation = () => {
       {
         Header: "Full Name",
         accessor: "full_name",
-        // minWidth: 150,
-        // width: 200,
+        minWidth: 150,
+        width: 200,
         nofilter: true,
 
       },
       {
         Header: "Campaign",
         accessor: "campaign",
-        // minWidth: 200,
-        // width: 280,
+        minWidth: 200,
+        width: 280,
 
       },
       {
         Header: "Email",
         accessor: "email",
-        // minWidth: 150,
-        // width: 200,
+        minWidth: 150,
+        width: 200,
         nofilter: true,
 
       },
       {
         Header: "Donation",
         accessor: "amount",
-        // minWidth: 200,
-        // width: 280,
+        minWidth: 200,
+        width: 280,
 
       },
       {
         Header: "Payment Type",
         accessor: "payment_type",
-        // minWidth: 150,
-        // width: 200,
+        minWidth: 150,
+        width: 200,
         nofilter: true,
+
+      },
+      {
+        Header: "Status",
+        accessor: "status",
+        minWidth: 150,
+        width: 200,
 
       },
       {

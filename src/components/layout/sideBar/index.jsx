@@ -45,7 +45,7 @@ export function SideBar({ mobileOpen, setMobileOpen }) {
             },
           }}
         >
-          <DrawerBody />
+          <DrawerBody  />
         </Drawer>
         <Drawer
           PaperProps={{

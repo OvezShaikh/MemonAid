@@ -21,6 +21,7 @@ import BottomSlider from "../../components/layout/BottomSlider/Index";
 
 import FilterField from "../../components/inputs/FilterField/Index";
 import UserLogin from "../login/Login_page/Index";
+import SelectWithCheckboxes from "../../components/inputs/FilterField/Index";
 
 function Home() {
   const [userList, setUserList] = useState([]);
@@ -228,7 +229,7 @@ function Home() {
           </button>
         </div>
         {showOptions && (
-          <FilterField
+          <SelectWithCheckboxes
             sendCategoryToParent={receiveCategoryFromChild}
             sendLocationToParent={receiveLocationFromChild}
           />

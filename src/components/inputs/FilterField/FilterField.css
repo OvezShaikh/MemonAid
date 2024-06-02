@@ -1,31 +1,91 @@
-div#demo-multiple-checkbox {
-    border-top: rgba(235, 235, 235, 1) 2px solid !important;
-    padding-right: 0;
-    padding-top: 18px;
 
-}
 
-fieldset.MuiOutlinedInput-notchedOutline{
-    border: rgba(235, 235, 235, 1) 2px solid !important;
-}
-
-span.no-selected-text{
+.select-with-checkboxes {
     position: relative;
-    background: linear-gradient(to right, rgb(255, 159, 10) 0%, rgb(255, 55, 95) 62.9%) text;
-    -webkit-text-fill-color: transparent;
-}
+    display: inline-block;
+    width: 200px;
+  }
+  
+  .select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  
+  .arrow {
+    margin-left: 10px;
+  }
+  
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    z-index: 21;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Hide the default checkbox */
+  .option input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Create a custom checkbox */
+  .custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-right: 8px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Checked state styles */
+  .option input[type="checkbox"]:checked + .custom-checkbox {
+    /* background-color: #007bff; */
+    /* border-color: #007bff; */
+    background-image: url('../../../assets/CheckBoxGradient.png');
+  }
+  
+  /* Custom checkmark */
+  .option input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
 
-.extra-filter-options svg{
-    scale: 1.5;
-    margin-right: 16px;
-}
-
-
-.extra-filter-options .Mui-selected{
-
-    background-color: transparent !important;
-
-}
-
-
-
+  .select-box{
+    height: 51px;
+  }
+ 

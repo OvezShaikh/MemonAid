@@ -8,6 +8,7 @@ import UserNavbar from "../../login/UserNavbar";
 import axios from "axios";
 import ScrollableTabsButtonForce from "../../../components/layout/ScrollableTabsButtonAuto";
 import FilterField from "../../../components/inputs/FilterField/Index";
+import SelectWithCheckboxes from "../../../components/inputs/FilterField/Index";
 
 function Index() {
   const [userList, setUserList] = useState([]);
@@ -175,7 +176,7 @@ function Index() {
             </button>
           </div>
           {showOptions && (
-            <FilterField
+            <SelectWithCheckboxes
               sendCategoryToParent={receiveCategoryFromChild}
               sendLocationToParent={receiveLocationFromChild}
             />

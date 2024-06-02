@@ -43,7 +43,7 @@ function Donor({ data }) {
                       {firstLetter}
                     </StyledAvatar>
                     <h1 className="col-span-6 flex items-center pl-2 max-tablet:text-[1.1rem] font-[satoshi] font-semibold text-[1.5rem] max-tablet:pl-5">
-                      {items.full_name ? items.full_name : "Anonymous"}
+                      {items.is_anonymous ?   "Anonymous" : items.full_name}
                     </h1>
                   </div>
                 </div>

@@ -102,6 +102,13 @@ const Index = () => {
 
             },
             {
+                Header: "Status",
+                accessor: "status",
+                minWidth: 150,
+                width: 200,
+        
+              },
+            {
                 Header: "Date",
                 accessor: "created_on",
                 // minWidth: 200,

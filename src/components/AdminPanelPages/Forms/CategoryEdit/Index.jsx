@@ -35,7 +35,7 @@ function AddNew() {
     is_active: Category?.is_active || false,
   };
   const validationSchema = yup.object().shape({
-    title: yup.string().required("Title is required"),
+    name: yup.string().required("Title is required"),
     slug: yup
       .string()
       .required("Slug/URL is required")

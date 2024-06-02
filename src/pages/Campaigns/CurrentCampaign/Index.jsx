@@ -7,11 +7,10 @@ import PrimaryButton from "../../../components/inputs/PrimaryButton";
 import { Grid, Typography } from "@mui/material";
 import SecondaryButton from "../../../components/inputs/secondaryButton";
 import { useLocation, useNavigate, useParams, Link } from "react-router-dom";
-import React, { useContext, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Avatar } from "@mui/material";
-import UserNavbar from "../../login/UserNavbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GiHazardSign } from "react-icons/gi";
@@ -19,8 +18,10 @@ import { Dialog } from "../../../components/layout/dialogBox/dialog";
 import InputField from "../../../components/inputs/InputField";
 import { Form, Formik } from "formik";
 import ErrorIcon from "@mui/icons-material/Error";
+import copy from "copy-to-clipboard";
 import { useCreateOrUpdate } from "../../../Hooks";
 import InputAdminField from "../../../components/inputs/InputAdminField/Index";
+import { FaCopy  } from "react-icons/fa";
 import {
   EmailIcon,
   EmailShareButton,
@@ -30,28 +31,21 @@ import {
   TwitterShareButton,
   WhatsappIcon,
   WhatsappShareButton,
-  XIcon,
 } from "react-share";
 import { MdClose } from "react-icons/md";
 import UserLogin from "../../login/Login_page/Index";
 
 function CurrentCampaign({
-  key,
-  username,
-  cardImage,
   goalAmount,
   fundRaised,
   onClose,
-  daysLeft,
-  userCount,
-  location,
-  og_id,
 }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { id } = useParams();
   const [cardDetails, setCardDetails] = useState(null);
   const [showSharePopup, setShowSharePopup] = useState(false);
+  
 
   const handleShareButtonClick = () => {
     setShowSharePopup(true);
@@ -72,12 +66,22 @@ function CurrentCampaign({
     url: `/user-dashboard/report-campaign`,
   });
   const handleButtonClick = () => {
-    if (cardDetails?.fund_raised === cardDetails?.goal_amount) {
+    if (cardDetails?.fund_raised === cardDetails?.goal_amount || cardDetails?.fund_raised > cardDetails?.goal_amount) {
       toast.info("Donation goal has already been reached", {
         position: "top-right",
       });
     } else {
       return null;
+    }
+  };
+
+  const copyToClipboard = () => {
+    let currentURL = window.location.href;
+    let isCopy = copy(currentURL);
+    if (isCopy) {
+      toast.success("Copied to Clipboard" ,{
+        position:'top-right'
+      });
     }
   };
 
@@ -289,7 +293,7 @@ function CurrentCampaign({
             <div className="w-full">
               <Link
                 to={
-                  cardDetails?.fund_raised === cardDetails?.goal_amount
+                  cardDetails?.fund_raised === cardDetails?.goal_amount ||  cardDetails?.fund_raised > cardDetails?.goal_amount
                     ? "#"
                     : `/Home/donate/${id}`
                 }
@@ -435,6 +439,9 @@ function CurrentCampaign({
                           >
                             <PinterestIcon size={45} round />
                           </PinterestShareButton>
+                        </div>
+                        <div className="pl-4">
+                        <FaCopy size={40} onClick={copyToClipboard} />
                         </div>
                       </div>
                     </div>
@@ -609,7 +616,7 @@ function CurrentCampaign({
       <div className="flex justify-center mt-4 gap-4 max-desktop:hidden">
         <Link
           to={
-            cardDetails?.fund_raised === cardDetails?.goal_amount
+            cardDetails?.fund_raised === cardDetails?.goal_amount || cardDetails?.fund_raised > cardDetails?.goal_amount
               ? "#"
               : `/Home/donate/${id}`
           }

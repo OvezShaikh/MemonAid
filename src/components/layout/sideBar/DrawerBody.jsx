@@ -11,7 +11,7 @@ import {
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { RiArrowRightSFill } from "react-icons/ri";
-
+import Badge from '@mui/material/Badge';
 import { Link, useLocation } from "react-router-dom";
 import { TbCaretRightFilled } from "react-icons/tb";
 
@@ -135,6 +135,7 @@ const CollapsibleMenuItem = ({
           )}
         </ListItemButton>
       </ListItem>
+      
       <Collapse
         in={selectedPath.startsWith(item.path)}
         timeout="auto"
@@ -144,12 +145,14 @@ const CollapsibleMenuItem = ({
         <List component="div" className={`border-start  ps-2 py-0 ml-8`}>
           {item.children.map((subItem, index) =>
             subItem?.children ? (
+              
               <CollapsibleMenuItem
                 item={subItem}
                 index={index}
                 selectedPath={selectedPath}
                 setSelectedMenu={setSelectedMenu}
               />
+              
             ) : (
               <Link key={subItem.title} to={subItem.path}>
                 <ListItem
@@ -179,6 +182,7 @@ const CollapsibleMenuItem = ({
                   )}
 
                   <ListItemButton className="pl-8">
+                  
                     <RiArrowRightSFill className="text-[#B6BAC3]" />
                     <ListItemText
                       primary={subItem.title}
@@ -190,6 +194,7 @@ const CollapsibleMenuItem = ({
                         paddingLeft: "1.5rem",
                       }}
                     />
+                   
                   </ListItemButton>
                 </ListItem>
               </Link>
@@ -250,17 +255,17 @@ const DrawerBody = () => {
       {
         icon: "CausesApprovalIcon",
         path: "/AdminPanel/Causes-Edit-Approval",
-        title: "Cause Edit Approval",
+        title: "Campaign Edit Approval",
       },
       {
         icon: "ScholarshipCausesIcon",
         path: "/AdminPanel/Scholarship-Cause",
-        title: "Scholarship Cause",
+        title: "Scholarship Campaign",
       },
       {
         icon: "ReportedIcon",
         path: "/AdminPanel/Reported-Cause",
-        title: "Reported Cause",
+        title: "Reported Campaign",
       },
       {
         icon: "WithdrawalsIcon",
@@ -304,12 +309,12 @@ const DrawerBody = () => {
       {
         icon: "CausesApprovalIcon",
         path: "/AdminPanel/Causes-Edit-Approval",
-        title: "Cause Edit Approval",
+        title: "Campaign Edit Approval",
       },
       {
         icon: "ReportedIcon",
         path: "/AdminPanel/Reported-Cause",
-        title: "Reported Cause",
+        title: "Reported Campaign",
       }
     ]
   : [
