@@ -331,7 +331,7 @@ function Footer() {
                 textTransform: "capitalize",
               }}
             >
-              2464 Royal Ln. Mesa, New Jersey 45463
+              A-1 Memon Colony, Dargah Road, Kazi Bagh, Parbhani, Maharashtra India 431 401
             </p>
           </div>
 
@@ -447,7 +447,8 @@ function Footer() {
                     fontWeight: "400",
                     textTransform: "capitalize",
                   }}
-                  to="#"
+                  to="https://www.youtube.com/channel/UCAfC_F7RWTa2hYbJ1f3UQlA"
+                  target="_blank"
                 >
                   <img src={icons.FooterIconYo} />
                 </Link>
