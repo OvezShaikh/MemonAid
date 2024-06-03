@@ -83,3 +83,25 @@ const FormSlider = ({ isSmallScreen }) => {
 };
 
 export default FormSlider;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
