@@ -2,6 +2,7 @@ import React from "react";
 import AdminNavbar from "../AdminNavbar";
 import { User_SideBar } from "../sideBar/User_panel";
 import { useMediaQuery } from "@mui/material";
+import images from "../../../constants/images";
 
 const UserPanel = ({ children }) => {
   const [mobileOpen, setMobileOpen] = React.useState(true);
@@ -24,6 +25,8 @@ const UserPanel = ({ children }) => {
             : "100%",
           marginLeft: isMobile ? "0px" : mobileOpen ? "270px" : "0px",
           paddingRight: isMobile ? "2rem" : mobileOpen ? "15px" : "2rem",
+          backgroundImage: `url(${images.dashboard_bg})`, // Correctly interpolate the image URL
+          backgroundSize: "cover",
         }}
       >
         {children}

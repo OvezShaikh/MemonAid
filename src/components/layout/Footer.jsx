@@ -2,8 +2,8 @@ import React from "react";
 import images from "../../constants/images";
 import { TiSocialTwitter } from "react-icons/ti";
 import { FiInstagram } from "react-icons/fi";
-import { RiPinterestLine } from "react-icons/ri";
 import { RiYoutubeLine } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa";
 import icons from "../../constants/icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SecondaryButton from "../inputs/secondaryButton";
@@ -184,7 +184,7 @@ function Footer() {
         <div className="flex justify-between max-desktop:flex-wrap max-tablet:justify-start desktop:max-w-[1628px] desktop:m-auto">
           <div className="w-[34%] max-desktop:w-[100%] max-desktop:mb-[48px] max-tablet:mb-[20px] max-tablet:w-[100%] ">
             <img
-              className="desktop:w-[180px]  desktop:h-[60px]"
+              className="max-desktop:w-[180px] -m-2 desktop:pb-4 max-desktop:pb-4 max-tablet:pb-4 max-desktop:h-[60px] max-tablet:w-[120px] max-tablet:h-[60px] desktop:w-[180px] desktop:h-auto"
               src={images.Footer_logo}
               alt=""
             />
@@ -237,7 +237,7 @@ function Footer() {
                     fontWeight: "400",
                     textTransform: "capitalize",
                   }}
-                  to="/Home/Knowing-Fairseed"
+                  to="/Home/Knowing-MemonAid"
                 >
                   About Us
                 </Link>
@@ -250,7 +250,7 @@ function Footer() {
                     fontWeight: "400",
                     textTransform: "capitalize",
                   }}
-                  to="#"
+                  to="/Home/Blog-Post"
                 >
                   Blog Post
                 </Link>
@@ -263,7 +263,7 @@ function Footer() {
                     fontWeight: "400",
                     textTransform: "capitalize",
                   }}
-                  to="#"
+                  to="/Home/Photo-Gallery"
                 >
                   Photo Gallery
                 </Link>
@@ -291,7 +291,7 @@ function Footer() {
                     fontWeight: "400",
                     textTransform: "capitalize",
                   }}
-                  to="#"
+                  to="/Home/Contact-Us"
                 >
                   Contact us
                 </Link>
@@ -304,7 +304,7 @@ function Footer() {
                     fontWeight: "400",
                     textTransform: "capitalize",
                   }}
-                  to="#"
+                  to="/Home/Our-Services"
                 >
                   Our services
                 </Link>
@@ -436,9 +436,10 @@ function Footer() {
                     fontWeight: "400",
                     textTransform: "capitalize",
                   }}
-                  to="#"
+                  to="https://www.facebook.com/memonaidinternational/"
+                  target="_blank"
                 >
-                  <img src={icons.FooterIconPi} />
+                  <FaFacebook />
                 </Link>
                 <Link
                   className="text-white/80 ml-3 text-3xl"

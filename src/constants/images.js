@@ -97,6 +97,7 @@ import HeaderImage from "../assets/HeaderImage.svg";
 import HeaderImage2 from "../assets/HeaderImage2.svg";
 import Default_Profile_pic from "../assets/Default_Profile_pic.png";
 import Bg404 from "../assets/Bg404.jpg";
+import dashboard_bg from "../assets/dashboard_bg.png"
 
 export default {
   SealCheck,
@@ -196,4 +197,5 @@ export default {
   HeaderImage2,
   Default_Profile_pic,
   Bg404,
+  dashboard_bg,
 };

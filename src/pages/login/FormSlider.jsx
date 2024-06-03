@@ -1,5 +1,7 @@
 import React from "react";
 import SideImage from "../../assets/SideImage.jpg";
+import SideImage1 from "../../assets/SlideImage1.jpg";
+import SideImage2 from "../../assets/SlideImage2.jpg";
 import { Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import Slider from "react-slick";
@@ -60,18 +62,17 @@ const FormSlider = ({ isSmallScreen }) => {
       {!isSmallScreen && (
         <div>
           <StyledSlider {...settings}>
-            <img src={SideImage} />
-            <img src={SideImage} />
-            <img src={SideImage} />
-            <img src={SideImage} />
+            <img src={SideImage1} />
+            <img src={SideImage2} />
+            <img src={SideImage1} />
+            <img src={SideImage2} />
           </StyledSlider>
           <OverlayContainer
             sx={{ bottom: "4rem", right: "1", marginLeft: "60px" }}
           >
             <OverlayBox sx={{ borderRadius: "10px" }}>
-              <Typography variant="h6" style={{ color: "#fff" }}>
-                "Empower minds, transform lives. Support <br />
-                education today for a brighter tomorrow."
+              <Typography variant="h6" style={{ color: "#696969" }}>
+                "Together To Prosper" <br />
               </Typography>
             </OverlayBox>
           </OverlayContainer>
