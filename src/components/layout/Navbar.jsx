@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import PrimaryButton from "../inputs/PrimaryButton";
 import Images from "../../constants/images";
+import LogoImg from "../../assets/MemonLogo.png";
 import UserLogin from "../../pages/login/Login_page/Index";
 import { Link, NavLink } from "react-router-dom";
 import ProfileAvatar from "../../pages/login/ProfileAvatar";
@@ -191,6 +192,7 @@ export default function Example() {
     setQuery("");
     setSearchResults([]); // Clear search results when input is cleared
   };
+  console.log(Images.Logo);
 
   return (
     <header
@@ -208,7 +210,8 @@ export default function Example() {
           <NavLink to="/Home">
           <img
               className="max-tablet:w-40 max-tablet:h-9 max-w-36"
-              src={Images.Logo}
+              // src={Images.Logo}
+              src={LogoImg}
               alt="MemonAid"
               title="MemonAid"
             />

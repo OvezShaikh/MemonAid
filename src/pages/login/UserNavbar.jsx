@@ -6,6 +6,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Images from "../../constants/images";
+import LogoImg from "../../assets/MemonLogo.png";
 import ProfileAvatar from "./ProfileAvatar";
 import PrimaryButton from "../../components/inputs/PrimaryButton";
 import { NavLink, Link } from "react-router-dom";
@@ -96,7 +97,7 @@ export default function Example() {
             <span className="sr-only">FairSeed </span>
             <img
               className=""
-              src={Images.Logo}
+              src={LogoImg}
               alt="FairSeed"
               title="FairSeed"
             />
@@ -360,7 +361,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <Link to="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src={Images.Logo} alt="" />
+              <img className="h-8 w-auto" src={LogoImg} alt="" />
             </Link>
             <button
               type="button"

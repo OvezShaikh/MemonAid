@@ -3,6 +3,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import TuneIcon from "@mui/icons-material/Tune";
 import HelpIcon from "@mui/icons-material/Help";
 import Images from "../../constants/images";
+import LogoImg from "../../assets/MemonLogo.png";
 import DropDown from "./navbar/DropDown";
 import { useMediaQuery } from "@mui/material";
 import Badge from "@mui/material/Badge";
@@ -29,7 +30,7 @@ const Navbar = () => {
         <div className="w-[815.56px] self-stretch pt-2 pb-2 justify-start items-center gap-4 max-tablet:pl-0 flex">
           <div className="w-24 h-9 relative">
             <Link to={"/Home"}>
-              <img src={Images.Logo} alt="" />
+              <img src={LogoImg} alt="" />
             </Link>
           </div>
         </div>
