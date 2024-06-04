@@ -4,7 +4,7 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import PrimaryButton from "../inputs/PrimaryButton";
-import Images from "../../constants/Images";
+import Images from "../../constants/images";
 import UserLogin from "../../pages/login/Login_page/Index";
 import { Link, NavLink } from "react-router-dom";
 import ProfileAvatar from "../../pages/login/ProfileAvatar";

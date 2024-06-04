@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import images from "../../constants/images";
+import Images from "../../constants/images";
 import ProfileAvatar from "./ProfileAvatar";
 import PrimaryButton from "../../components/inputs/PrimaryButton";
 import { NavLink, Link } from "react-router-dom";
@@ -96,7 +96,7 @@ export default function Example() {
             <span className="sr-only">FairSeed </span>
             <img
               className=""
-              src={images.Logo}
+              src={Images.Logo}
               alt="FairSeed"
               title="FairSeed"
             />
@@ -360,7 +360,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <Link to="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src={images.Logo} alt="" />
+              <img className="h-8 w-auto" src={Images.Logo} alt="" />
             </Link>
             <button
               type="button"
