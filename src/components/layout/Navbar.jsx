@@ -4,7 +4,7 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import PrimaryButton from "../inputs/PrimaryButton";
-import images from "../../constants/images";
+import Images from "../../constants/Images";
 import UserLogin from "../../pages/login/Login_page/Index";
 import { Link, NavLink } from "react-router-dom";
 import ProfileAvatar from "../../pages/login/ProfileAvatar";
@@ -208,7 +208,7 @@ export default function Example() {
           <NavLink to="/Home">
           <img
               className="max-tablet:w-40 max-tablet:h-9 max-w-36"
-              src={images.Logo}
+              src={Images.Logo}
               alt="MemonAid"
               title="MemonAid"
             />
@@ -537,7 +537,7 @@ export default function Example() {
                               src={
                                 result.campaign_image
                                   ? `${process.env.REACT_APP_API_URL}${result.campaign_image}`
-                                  : images.HeaderImage
+                                  : Images.HeaderImage
                               }
                               className="size-7 ml-2 rounded-md"
                               alt=""
@@ -583,7 +583,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <Link to="#" className="-m-1.5 p-1.5 outline-none">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src={images.Logo} alt="" />
+              <img className="h-8 w-auto" src={Images.Logo} alt="" />
             </Link>
             <button
               type="button"
@@ -640,7 +640,7 @@ export default function Example() {
                             src={
                               result.campaign_image
                                 ? `${process.env.REACT_APP_API_URL}${result.campaign_image}`
-                                : images.HeaderImage
+                                : Images.HeaderImage
                             }
                             className="size-7 ml-2 rounded-md"
                             alt=""
