@@ -192,7 +192,7 @@ export default function Example() {
     setQuery("");
     setSearchResults([]); // Clear search results when input is cleared
   };
-  console.log(Images.Logo);
+  
 
   return (
     <header
@@ -586,7 +586,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <Link to="#" className="-m-1.5 p-1.5 outline-none">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src={Images.Logo} alt="" />
+              <img className="h-8 w-auto" src={LogoImg} alt="" />
             </Link>
             <button
               type="button"
