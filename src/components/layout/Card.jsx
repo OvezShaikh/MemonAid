@@ -237,7 +237,7 @@ function Card({
 
                   <p>Bank details for donation are mentioned in the cause itself, please refer the cause to donate the beneficiary directly.
                     Or contact us at
-                    <span className="text-primary"> +91 9117 01 9117 I memonaidinternational@gmail.com.</span></p>
+                    <span className="text-primary"> +91 9117 01 9117  memonaidinternational@gmail.com.</span></p>
 
                 </div>
               </Dialog>
