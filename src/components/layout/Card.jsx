@@ -2,11 +2,14 @@ import React from "react";
 import icons from "../../constants/icons";
 import images from "../../constants/images";
 import { useState, useEffect } from "react";
-import { Avatar, LinearProgress } from "@mui/material";
+import { Avatar, Button, LinearProgress } from "@mui/material";
 import { Link } from "react-router-dom";
 import { RiErrorWarningLine } from "react-icons/ri";
 import Profile from "../inputs/AvatarCrop/Profile";
 import { toast } from "react-toastify";
+import PrimaryButton from "../inputs/PrimaryButton";
+import SecondaryButton from "../inputs/secondaryButton";
+import { Dialog } from "./dialogBox/dialog";
 
 function Card({
   key,
@@ -31,13 +34,7 @@ function Card({
   //     position: "top-center",
   //   });
   // };
-  const handleButtonClick = () => {
-    if (fundRaised === goalAmount || fundRaised > goalAmount ) {
-      toast.info("Donation goal has already been reached", {
-        position: "top-right",
-      });
-    }
-  };
+
 
   const fullNameWords = username?.split(" ");
   const firstLetter = fullNameWords?.[0]?.charAt(0)?.toUpperCase() ?? "";
@@ -174,9 +171,8 @@ function Card({
               sx={{
                 height: "10px",
                 borderRadius: "16px",
-                background: `linear-gradient(to right, #0DC7B1, #0DC7B1 ${
-                  (fundRaised / goalAmount) * 100
-                }%, #e0e0e0 ${(fundRaised / goalAmount) * 100}%)`,
+                background: `linear-gradient(to right, #0DC7B1, #0DC7B1 ${(fundRaised / goalAmount) * 100
+                  }%, #e0e0e0 ${(fundRaised / goalAmount) * 100}%)`,
                 "& .MuiLinearProgress-bar": {
                   backgroundColor: "#0DC7B1 !important  ",
                 },
@@ -211,23 +207,41 @@ function Card({
               </div>
             </div>
             <div className="w-[35%] max-desktop:w-full">
-              <Link
+              {/* <Link
                 to={fundRaised === goalAmount || fundRaised > goalAmount ? "#" : `/Home/donate/${og_id}`}
+              > */}
+              <Dialog
+                button={
+                  <button
+                    // onClick={fundRaised === goalAmount ? handleClick : null}
+                    className=" border-2   rounded-lg border-red-400 px-2 py-1 max-desktop:w-full max-desktop:mt-[16px]"
+                    style={{ backgroundColor: "rgba(255, 246, 245, 1)" }}
+                  >
+                    <div className="flex pl-1 pr-2 py-1 max-desktop:justify-center">
+                      <img className="" src={images?.Coins} alt="" />
+                      <p className="pl-1   text-[1.1rem] max-tablet:text-[1rem]">
+                        Donate
+                      </p>
+                    </div>
+                  </button>
+                }
+                title="donate Cause"
+              // onClose={() => onClose && onClose()}
               >
-                <button
-                  // onClick={fundRaised === goalAmount ? handleClick : null}
-                  onClick={handleButtonClick}
-                  className=" border-2   rounded-lg border-red-400 px-2 py-1 max-desktop:w-full max-desktop:mt-[16px]"
-                  style={{ backgroundColor: "rgba(255, 246, 245, 1)" }}
-                >
-                  <div className="flex pl-1 pr-2 py-1 max-desktop:justify-center">
-                    <img className="" src={images?.Coins} alt="" />
-                    <p className="pl-1   text-[1.1rem] max-tablet:text-[1rem]">
-                      Donate
-                    </p>
-                  </div>
-                </button>
-              </Link>
+
+                <div className="flex flex-col justify-center items-center gap-2 px-10">
+
+                  <Link to={`/campaign-details/${og_id}`} className="text-primary font-bold font-satoshi">Link to Story</Link>
+                  {fundRaised === goalAmount || fundRaised > goalAmount && <p className="text-warning text-bold">Goal has been reached</p>
+                  }
+
+                  <p>Bank details for donation are mentioned in the cause itself, please refer the cause to donate the beneficiary directly.
+                    Or contact us at
+                    <span className="text-primary"> +91 9117 01 9117 I memonaidinternational@gmail.com.</span></p>
+
+                </div>
+              </Dialog>
+              {/* </Link> */}
             </div>
           </div>
         </div>

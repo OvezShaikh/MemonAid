@@ -66,14 +66,14 @@ function CurrentCampaign({
     url: `/user-dashboard/report-campaign`,
   });
   const handleButtonClick = () => {
-    if (cardDetails?.fund_raised === cardDetails?.goal_amount || cardDetails?.fund_raised > cardDetails?.goal_amount) {
-      toast.info("Donation goal has already been reached", {
+    // if (cardDetails?.fund_raised === cardDetails?.goal_amount || cardDetails?.fund_raised > cardDetails?.goal_amount) {
+      toast.info("For Donation read the Story!!!!", {
         position: "top-right",
       });
-    } else {
-      return null;
+    // } else {
+      // return null;
     }
-  };
+  // };
 
   const copyToClipboard = () => {
     let currentURL = window.location.href;
@@ -294,11 +294,11 @@ function CurrentCampaign({
             </p>
             <div className="w-full">
               <Link
-                to={
-                  cardDetails?.fund_raised === cardDetails?.goal_amount ||  cardDetails?.fund_raised > cardDetails?.goal_amount
-                    ? "#"
-                    : `/Home/donate/${id}`
-                }
+                // to={
+                //   cardDetails?.fund_raised === cardDetails?.goal_amount ||  cardDetails?.fund_raised > cardDetails?.goal_amount
+                //     ? "#"
+                //     : `/Home/donate/${id}`
+                // }
               >
                 <PrimaryButton
                   onClick={handleButtonClick}
@@ -617,14 +617,10 @@ function CurrentCampaign({
       </div>
       <div className="flex justify-center mt-4 gap-4 max-desktop:hidden">
         <Link
-          to={
-            cardDetails?.fund_raised === cardDetails?.goal_amount || cardDetails?.fund_raised > cardDetails?.goal_amount
-              ? "#"
-              : `/Home/donate/${id}`
-          }
+          to={"/Home/OnGoingCampaigns"}
         >
           <PrimaryButton
-            onClick={handleButtonClick}
+            // onClick={handleButtonClick}
             sx={{
               padding: "16px",
               borderRadius: "8px",

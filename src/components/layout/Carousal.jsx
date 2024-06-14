@@ -10,6 +10,7 @@ import { useGetAll } from "../../Hooks";
 import { useState } from "react";
 import images from "../../constants/images";
 import removeTags from "../../utils/Removetag";
+import { Dialog } from "./dialogBox/dialog";
 
 const style = {
   fontSize: "1.5rem",
@@ -100,8 +101,8 @@ const HomeSwiper = () => {
       }}
       navigation
       scrollbar={{ draggable: true }}
-      // onSwiper={(swiper) => console.log(swiper)}
-      // onSlideChange={() => console.log("slide change")}
+    // onSwiper={(swiper) => console.log(swiper)}
+    // onSlideChange={() => console.log("slide change")}
     >
       {allCards.map((item) => {
         const image = `${process.env.REACT_APP_API_URL}${item?.campaign_image}`;
@@ -131,14 +132,30 @@ const HomeSwiper = () => {
                   {removeTags(item?.summary)}
                 </p>
                 <div className="">
-                  <Link to={`/Home/donate/${item?.id}`} className="mx-auto">
-                    <PrimaryButton
-                      className="hidden max-tablet::block"
-                      sx={style}
-                    >
-                      Donate for the Cause
-                    </PrimaryButton>
-                  </Link>
+                  <Dialog
+                    button={
+                      <PrimaryButton
+                        className="hidden max-desktop:block"
+                        sx={style}
+                      >
+                        Donate for the Cause
+                      </PrimaryButton>
+                    }
+                    title="donate Cause"
+                  // onClose={() => onClose && onClose()}
+                  >
+
+                    <div className="flex flex-col justify-center items-center gap-2 px-10">
+
+                      <Link to={`/campaign-details/${item?.id}`} className="text-primary font-bold font-satoshi">Link to Story</Link>
+
+
+                      <p>Bank details for donation are mentioned in the cause itself, please refer the cause to donate the beneficiary directly.
+                        Or contact us at
+                        <span className="text-primary"> +91 9117 01 9117 I memonaidinternational@gmail.com.</span></p>
+
+                    </div>
+                  </Dialog>
                 </div>
               </div>
               <div className="max-w-[1920px] max-desktop:w-full max-tablet:w-full w-full h-[753px]  z-18 absolute top-0 left-0 bg-gradient-to-b from-transparent via-blur-white to-transparent lg:bg-gradient-to-r"></div>
@@ -156,22 +173,55 @@ const HomeSwiper = () => {
                     {removeTags(item?.summary)}
                   </p>
                   <div className="max-tablet:hidden">
-                    <Link to={`/Home/donate/${item?.id}`} className="mx-auto">
-                      <PrimaryButton
-                        className="hidden max-tablet:block"
-                        sx={style}
-                      >
-                        Donate for the Cause
-                      </PrimaryButton>
-                    </Link>
+                    <Dialog
+                      button={
+                        <PrimaryButton
+                          className="hidden max-tablet:block"
+                          sx={style}
+                        >
+                          Donate for the Cause
+                        </PrimaryButton>
+                      }
+                      title="donate Cause"
+                    // onClose={() => onClose && onClose()}
+                    >
+
+                      <div className="flex flex-col justify-center items-center gap-2 px-10">
+
+                        <Link to={`/campaign-details/${item?.id}`} className="text-primary font-bold font-satoshi">Link to Story</Link>
+
+
+                        <p>Bank details for donation are mentioned in the cause itself, please refer the cause to donate the beneficiary directly.
+                          Or contact us at
+                          <span className="text-primary"> +91 9117 01 9117 I memonaidinternational@gmail.com.</span></p>
+
+                      </div>
+                    </Dialog>
                   </div>
-                  <div className="max-tablet:block max-desktop:hidden">
-                    <Link to={`/Home/donate/${item?.id}`} className="mx-auto">
-                      <PrimaryButton className="block" sx={style1}>
-                        Donate for the Cause
-                      </PrimaryButton>
-                    </Link>
-                  </div>
+                
+                   <Dialog
+                      button={
+                        <div className="max-tablet:block max-desktop:hidden">
+                        <PrimaryButton className="block" sx={style1}>
+                          Donate for the Cause
+                        </PrimaryButton>
+                      </div>
+                      }
+                      title="donate Cause"
+                    // onClose={() => onClose && onClose()}
+                    >
+
+                      <div className="flex flex-col justify-center items-center gap-2 px-2">
+
+                        <Link to={`/campaign-details/${item?.id}`} className="text-primary font-bold font-satoshi">Link to Story</Link>
+
+
+                        <p>Bank details for donation are mentioned in the cause itself, please refer the cause to donate the beneficiary directly.
+                          Or contact us at
+                          <span className="text-primary"> +91 9117 01 9117 I memonaidinternational@gmail.com.</span></p>
+
+                      </div>
+                    </Dialog>
                 </div>
               </div>
               <div

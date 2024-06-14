@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b386e7d.css",
-    "main.js": "/static/js/main.0da12771.js",
+    "main.css": "/static/css/main.480d67ac.css",
+    "main.js": "/static/js/main.8adb8ffc.js",
     "static/js/787.bcf9f87a.chunk.js": "/static/js/787.bcf9f87a.chunk.js",
     "static/media/Bg404.jpg": "/static/media/Bg404.85fbc2d81eb844fe630e.jpg",
     "static/media/HomePageHero.png": "/static/media/HomePageHero.c09f0ed5bc6dd60ed8e0.png",
@@ -59,8 +59,8 @@
     "static/media/UploadFile.svg": "/static/media/UploadFile.79a5a49c41d3ba44dc8c6b7a7949e11e.svg",
     "static/media/FooterIconIn.svg": "/static/media/FooterIconIn.05ec5f371315fa363943ab494e5524c6.svg",
     "static/media/Clock.svg": "/static/media/Clock.8a5944adc70dd83b8adfef35c32cd9f9.svg",
-    "index.html": "/index.html",
     "static/media/CausesDetails.svg": "/static/media/CausesDetails.5667242dca82a2610acd51858860d252.svg",
+    "index.html": "/index.html",
     "static/media/Success.svg": "/static/media/Success.83cbbf4b955c72be55739cbbb420c637.svg",
     "static/media/Coins2.svg": "/static/media/Coins2.0ed3b04734d738541d9578a558dc793d.svg",
     "static/media/UploadSimple.svg": "/static/media/UploadSimple.a934857f2330cb8a4d1c8db03a2a383c.svg",
@@ -76,12 +76,12 @@
     "static/media/CompleteVector.svg": "/static/media/CompleteVector.283460e77027851e234639aab13b9a5c.svg",
     "static/media/Vector.svg": "/static/media/Vector.536dcefe37993652dba25e75acec18fc.svg",
     "static/media/caretDown.svg": "/static/media/caretDown.347a9c3606b55fe2bce17035dc4a0341.svg",
-    "main.0b386e7d.css.map": "/static/css/main.0b386e7d.css.map",
-    "main.0da12771.js.map": "/static/js/main.0da12771.js.map",
+    "main.480d67ac.css.map": "/static/css/main.480d67ac.css.map",
+    "main.8adb8ffc.js.map": "/static/js/main.8adb8ffc.js.map",
     "787.bcf9f87a.chunk.js.map": "/static/js/787.bcf9f87a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b386e7d.css",
-    "static/js/main.0da12771.js"
+    "static/css/main.480d67ac.css",
+    "static/js/main.8adb8ffc.js"
   ]
 }
